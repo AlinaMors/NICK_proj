@@ -1,0 +1,194 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Мягкий светло-голубой фон */
+    color: #333; /* Темно-серый цвет текста */
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #fff; /* Белый цвет текста */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Белый цвет текста */
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease, font-family 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+    text-shadow: 2px 2px 5px rgba(0, 123, 255, 0.5);
+    font-family: 'Courier New', Courier, monospace; /* Change font to monospace */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.header {
+    display: none;
+}
+
+.header .navbar-nav .nav-link {
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.nav-buttons .btn-3d {
+    background: transparent;
+    color: #006400;
+    border: 2px solid #006400;
+    transition: all 0.3s ease;
+}
+
+.nav-buttons .btn-3d:hover {
+    background: linear-gradient(45deg, #006400, #00cc00);
+    color: white;
+    transform: scale(1.1);
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+}
+
+.welcome-section {
+    position: relative;
+    height: 70vh; /* Высота секции на 70% высоты экрана */
+    overflow: hidden; /* Скрыть выходящие за границы элементы */
+}
+
+.welcome-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Темный прозрачный слой для контраста */
+    z-index: 1;
+}
+
+.welcome-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Изображение будет покрывать всю секцию */
+}
+
+.start-walk-btn {
+    position: absolute;
+    bottom: 38%;
+    left: 52%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    padding: 10px 20px;
+    animation: pulsate 2s infinite;
+    z-index: 2;
+    background: linear-gradient(45deg, #3b4046, #04ff00);
+    border: none;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulsate {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.1);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+.main-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.main-buttons .btn {
+    background: none;
+    border: none;
+    text-align: center;
+}
+
+.main-buttons .icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-buttons .icon {
+    width: 100px; /* Увеличенный размер иконок */
+    height: 100px;
+    border-radius: 50%;
+    background-color: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    overflow: hidden; /* Для обрезки изображения по кругу */
+}
+
+.main-buttons .icon img {
+    width: 100%; /* Увеличить изображение внутри иконок */
+    height: 100%;
+    object-fit: cover; /* Сохранить пропорции изображения */
+}
+
+.main-buttons .icon-label {
+    color: #006400; /* Темно-зеленый цвет текста */
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.recommended-section, .news-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0; /* Отступы сверху и снизу */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.carousel-item {
+    display: inline-block;
+    background-color: #f8f9fa; /* Светло-серый фон для элементов карусели */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+}
+
+.animated {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

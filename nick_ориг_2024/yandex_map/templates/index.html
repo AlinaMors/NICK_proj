@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Map</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=40d1649f-0493-4b70-98ba-98533de7710b&lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-left">
+            <button class="back-btn" onclick="window.location.href='previous_page_url'">&#x2190;</button>
+            <span class="username">Nick</span>
+        </div>
+    </div>
+    <div class="container">
+        <div id="map" class="map"></div>
+        <div class="map-controls">
+            <button id="centerMapBtn">Center Map</button>
+            <button id="searchPlaceBtn">Search Place</button>
+            <label><input type="checkbox" id="filterTasks" checked> Tasks</label>
+            <label><input type="checkbox" id="filterAttractions" checked> Attractions</label>
+            <label><input type="checkbox" id="filterParks" checked> Parks</label>
+        </div>
+        <div class="bottom-bar">
+            <div class="icon-container">
+                <div class="icon" onclick="showTasks()"><img src="{{ url_for('static', filename='task_icon.png') }}" alt="Tasks"><span>Tasks</span></div>
+                <div class="icon" onclick="showTasks()"><img src="{{ url_for('static', filename='heart_icon.png') }}" alt="Tasks"><span>Tasks</span></div>
+                <div class="icon" onclick="showEnvironmental()"><img src="{{ url_for('static', filename='env_icon.png') }}" alt="Environmental"><span>Environmental</span></div>
+                <div class="icon" onclick="showCare()"><img src="{{ url_for('static', filename='care_icon.png') }}" alt="Care"><span>Care</span></div>
+                <div class="icon" onclick="showParks()"><img src="{{ url_for('static', filename='park_icon.png') }}" alt="Parks"><span>Parks</span></div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

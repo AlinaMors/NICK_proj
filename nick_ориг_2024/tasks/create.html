@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать задание</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="my-4 text-center">
+            <h1>Создать новое задание</h1>
+        </header>
+        <form>
+            <div class="form-group">
+                <label for="task-name">Название задачи:</label>
+                <input type="text" class="form-control" id="task-name" name="task-name" required>
+            </div>
+            <div class="form-group">
+                <label for="task-description">Описание задачи:</label>
+                <textarea class="form-control" id="task-description" name="task-description" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="task-difficulty">Сложность:</label>
+                <select class="form-control" id="task-difficulty" name="task-difficulty" required>
+                    <option value="easy">Легко</option>
+                    <option value="medium">Средне</option>
+                    <option value="hard">Сложно</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary kawaii-button">Создать</button>
+        </form>
+    </div>
+</body>
+</html>

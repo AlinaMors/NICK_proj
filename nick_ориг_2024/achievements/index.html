@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="minimal-menu">
+        <div class="menu-item">Главная</div>
+        <div class="menu-item">Задачи</div>
+        <div class="menu-item">Профиль</div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <img src="user-photo.jpg" alt="User Photo" class="profile-pic">
+                <div class="rating">Рейтинг: ★★★★☆</div>
+            </div>
+            <div class="col-md-9">
+                <div class="row mt-3">
+                    <div class="col-md-12 btn-group-custom">
+                        <button class="btn btn-modern" id="ecologyBtn">Экология</button>
+                        <button class="btn btn-modern" id="landmarksBtn">Достопримечательности</button>
+                        <button class="btn btn-modern dropdown-toggle" id="filterBtn">Упорядочить</button>
+                        <div class="dropdown-menu" id="filterOptions">
+                            <a class="dropdown-item" href="#" id="filterRecent">Дата добавления: сначала новые</a>
+                            <a class="dropdown-item" href="#" id="filterOldest">Дата добавления: сначала старые</a>
+                            <a class="dropdown-item" href="#" id="filterDifficult">По сложности</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3" id="achievementsContainer"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

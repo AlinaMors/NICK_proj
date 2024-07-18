@@ -1,0 +1,128 @@
+body {
+    background: url('saint_petersburg.png') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: #343a40;
+    padding-top: 60px;
+}
+
+.minimal-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.menu-item {
+    margin: 0 20px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #28a745;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.menu-item:hover {
+    color: #218838;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 1.3rem;
+}
+
+.profile-pic {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+    font-size: 1.2rem;
+    color: #f39c12;
+    margin-top: 10px;
+}
+
+.achievements-title-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.achievements-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #28a745;
+    text-align: center;
+    width: 100%;
+}
+
+.achievement-card {
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    background: rgba(230, 255, 230, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.achievement-card:hover {
+    transform: scale(1.05);
+    background: rgba(214, 245, 214, 0.8);
+}
+
+.achievement-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-modern {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.btn-modern:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #28a745;
+}
+
+#filterBtn {
+    background-color: #d9ffce;
+    color: #291616;
+    border: none;
+}
+
+#filterBtn:hover {
+    background-color: transparent;
+    color: #151414;
+}

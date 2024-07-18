@@ -1,0 +1,239 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    background: url('3.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(212, 247, 233, 0.5), rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+    z-index: 1;
+}
+
+.container, .main-content {
+    position: relative;
+    z-index: 2;
+}
+
+.sidebar {
+    position: fixed;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: left 0.3s;
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    padding-top: 20px;
+}
+
+.menu-icon {
+    position: fixed;
+    left: 0;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #ff69b4;
+    color: white;
+    z-index: 1001;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.menu-icon span {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+/* Styles for the sidebar menu links */
+.menu a {
+    margin: 5px 0;
+    padding: 15px;
+    background-color: rgba(255, 105, 180, 0.9);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.menu a:hover, .menu a:focus {
+    background-color: rgba(255, 182, 193, 0.9);
+    color: #000; /* Change color on hover */
+}
+
+.menu a:active {
+    background-color: #ff69b4;
+    color: white;
+}
+
+/* Styles for the horizontal menu links */
+.horizontal-menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+    font-size: 1.1em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.horizontal-menu a:hover, .horizontal-menu a:focus {
+    color: #ff1493;
+    background-color: rgba(255, 240, 245, 0.3);
+}
+
+.horizontal-menu a:active {
+    color: #ff69b4;
+    background-color: rgba(253, 244, 247, 0.6);
+    outline: none;
+}
+
+/* Active state for menu items */
+.menu a.active, .horizontal-menu a.active {
+    background-color: #ff69b4;
+    color: white;
+}
+
+.sidebar-header img {
+    width: 100px;
+    height: 100px;
+}
+
+.horizontal-menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    list-style: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    transition: transform 0.3s;
+    border-radius: 15px;
+    border: none;
+    width: 100%;
+    margin: 10px 0; /* Reduced margin for better spacing */
+}
+
+.kawaii-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 1em;
+}
+
+.card-text {
+    font-size: 0.9em;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.kawaii-button {
+    border-radius: 20px;
+    background-color: #ffb6c1;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.kawaii-button:hover {
+    background-color: #ff69b4;
+    color: white;
+}
+
+.kawaii-button-large {
+    font-size: 1.5em;
+    padding: 15px 30px;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.kawaii-button-large:hover {
+    background-color: #ff1493;
+    color: white;
+}
+
+.list-group-item {
+    transition: background-color 0.3s;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.kawaii-list-item:hover {
+    background-color: rgba(255, 240, 245, 0.9);
+}
+
+.kawaii-link {
+    color: #f23e3e;
+}
+
+.kawaii-link:hover {
+    color: #ff1493;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s;
+}
+
+.main-content.shifted {
+    margin-left: 300px;
+}
+
+h1, h2 {
+    text-shadow: 2px 2px 5px white;
+}
+
+/* New styles for menu items active state */
+.menu a.active, .horizontal-menu a.active {
+    background-color: #ff69b4;
+    color: white;
+}
+
+/* Отображение задач */
+.top-tasks .col-md-4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+}
+
+@media (min-width: 992px) {
+    .top-tasks .col-md-4 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
