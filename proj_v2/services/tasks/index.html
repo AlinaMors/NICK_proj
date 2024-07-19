@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Экран задач</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="horizontal-menu">
+            <a href="/profile" class="menu-item"><i class="fas fa-paw"></i>Профиль</a>
+            <a href="#" class="menu-item"><i class="fas fa-leaf"></i> Настройки</a>
+            <a href="/" class="menu-item"><i class="fas fa-landmark"></i> Главная</a>
+            <a href="/achievements" class="menu-item"><i class="fas fa-paw"></i> Достижения</a>
+            <a href="#" class="menu-item"><i class="fas fa-leaf"></i> Генерация Заданий</a>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 main-content">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Экран задач</h1>
+                <button class="btn btn-primary kawaii-button-large" onclick="window.location.href='create.html'">Создать задачу</button>
+            </div>
+
+            <h2>Доступные задачи</h2>
+            <div class="row top-tasks">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm kawaii-card">
+                        <img src="landmark.png" class="card-img-top" alt="Задача 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Прогулки с собаками</h5>
+                            <p class="card-text">Геймифицированные прогулки с собаками в Санкт-Петербурге</p>
+                            <button class="btn btn-info kawaii-button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm kawaii-card">
+                        <img src="landmark.png" class="card-img-top" alt="Задача 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Забота об экологии</h5>
+                            <p class="card-text">Забота об окружающей среде и экологии</p>
+                            <button class="btn btn-info kawaii-button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm kawaii-card">
+                        <img src="park.png" class="card-img-top" alt="Задача 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Интерактивная история</h5>
+                            <p class="card-text">Интерактивная история в Санкт-Петербурге</p>
+                            <button class="btn btn-info kawaii-button">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Фильтры задач</h2>
+            <div class="btn-group mb-3 kawaii-button-group" role="group" aria-label="Task filters">
+                <button type="button" class="btn btn-secondary kawaii-button">Уход за собаками</button>
+                <button type="button" class="btn btn-secondary kawaii-button">Экология</button>
+                <button type="button" class="btn btn-secondary kawaii-button">История</button>
+            </div>
+
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start kawaii-list-item">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Название задачи</h5>
+                        <small>Легко</small>
+                    </div>
+                    <p class="mb-1">Краткое описание задачи</p>
+                    <small>
+                        <button class="btn btn-link p-0 kawaii-link">Подробнее</button>
+                        <button class="btn btn-link p-0 kawaii-link">Найти похожие задачи</button>
+                    </small>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

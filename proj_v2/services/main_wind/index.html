@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Petersburg Walk App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main_wind/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Saint Petersburg Walk App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about_us">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <div class="col-12">
+                <div class="content text-center">
+                    <div class="welcome-section position-relative">
+                        <img src="main_wind/images/2.png" alt="Saint Petersburg" class="img-fluid welcome-img">
+                        <div class="overlay"></div>
+                        <button class="btn btn-primary start-walk-btn position-absolute" onclick="window.location.href = '/ya_map'">START WALK</button>
+                    </div>
+                    <div class="main-buttons mt-3">
+                        <div class="icon-container">
+                            <div class="icon">
+                                <img src="main_wind/images/profile_icon.png" alt="Profile">
+                            </div>
+                            <div class="icon-label"><a href="/profile">Profile</a></div>
+                        </div>
+                        <div class="icon-container">
+                            <div class="icon">
+                                <img src="main_wind/images/tasks_icon.png" alt="Tasks">
+                            </div>
+                            <div class="icon-label"><a href="/tasks">Tasks</a></div>
+                        </div>
+                        <div class="icon-container">
+                            <div class="icon">
+                                <img src="main_wind/images/map_icon.png" alt="Map">
+                            </div>
+                            <div class="icon-label"><a href="/ya_map">Map</a></div>
+                        </div>
+                   
+                        <div class="icon-container">
+                            <div class="icon">
+                                <img src="main_wind/images/achievements_icon.png" alt="Achievements">
+                            </div>
+                            <div class="icon-label"><a href="/achievements">Achievements</a></div>
+                        </div>
+                    </div>
+                    <div class="recommended-section mt-4 p-3 bg-light rounded">
+                        <h3>Recommended Tasks</h3>
+                        <div id="task_list_div" class="carousel task_list_div">
+                           
+                        </div>
+                    </div>
+                    <div class="news-section mt-4 p-3 bg-light rounded">
+                        <h3>News and Events</h3>
+                        <p>Latest updates and events related to the application or city.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main_wind/script.js"></script>
+</body>
+</html>
